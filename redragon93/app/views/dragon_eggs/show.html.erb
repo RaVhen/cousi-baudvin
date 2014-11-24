@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @dragon_egg.race %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @dragon_egg.count %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dragon_egg.description %>
+</p>
+
+<%= link_to 'Edit', edit_dragon_egg_path(@dragon_egg) %> |
+<%= link_to 'Back', dragon_eggs_path %>
