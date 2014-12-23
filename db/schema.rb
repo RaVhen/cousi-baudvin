@@ -11,39 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215102051) do
-
-  create_table "articles", force: true do |t|
-    t.string   "titre"
-    t.text     "corps"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "articles_authors", id: false, force: true do |t|
-    t.integer "article_id", null: false
-    t.integer "author_id",  null: false
-  end
-
-  add_index "articles_authors", ["article_id", "author_id"], name: "index_articles_authors_on_article_id_and_author_id"
-
-  create_table "authors", force: true do |t|
-    t.string   "titre"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141223113143) do
 
   create_table "comments", force: true do |t|
-    t.string  "comment"
-    t.integer "article_id"
+    t.string   "author"
+    t.text     "body"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
-  create_table "dragon_eggs", force: true do |t|
-    t.string   "race"
-    t.integer  "count"
-    t.string   "description"
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
