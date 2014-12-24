@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, :for => "inputDefault",:class => "control-label" %><br>
+    <%= f.text_field :title, :class => "form-control", :id => "inputDefault", :type => "text" %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+  <div class="form-group">
+    <%= f.label :body, :for => "inputLarge",:class => "control-label" %><br>
+    <%= f.text_area :body, :class => "form-control input-lg", :id => "inputLarge", :type => "text" %>
   </div>
   <div class="actions">
     <%= f.submit %>
