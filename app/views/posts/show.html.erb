@@ -1,17 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Name:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong>Description:</strong>
   <%= @post.body %>
 </p>
 
 <h2>Comments</h2>
-<%= render @post.comments %>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Author</th>
+      <th>Comment</th>
+      <th>Date created</th>
+    </tr>
+  </thead>
+  <tbody>
+	<%= render @post.comments %>
+  </tbody>
+</table> 
 
 <h2>Add a comment:</h2>
 <%= render "comments/form" %>

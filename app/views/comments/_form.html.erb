@@ -1,13 +1,14 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
+
+  <div class="form-group" style="width:400px;">
+    <%= f.label :author, :for => "inputDefault",:class => "control-label" %><br>
+    <%= f.text_field :author, :class => "form-control", :id => "inputDefault", :type => "text" %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+  <div class="form-group" style="width:400px;">
+    <%= f.label :body, :for => "inputLarge",:class => "control-label" %><br>
+    <%= f.text_area :body, :class => "form-control input-lg", :id => "inputLarge", :type => "text" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add new comment',:class => "btn btn-default"%>
   </div>
 <% end %>

@@ -1,20 +1,10 @@
-<p>
-  <b>Date created:</b>
-  <%= comment.created_at.strftime("%b %d, %Y") %>
-</p>
-<p>
-	<b>Author:</b>
-	<%= comment.author %>
-</p>
-<p>
-	<b>Comment:</b>
-	<%= comment.body %>
-</p>
-<p>
-  <%= button_to 'Destroy Comment', [comment.post, comment],
+
+    <tr class="active">
+      <td><%= comment.id %></td>
+      <td><%= comment.author %></td>
+      <td><%= comment.body %></td>
+      <td><%= comment.created_at.strftime("%b %d, %Y") %></td>
+      <td><%= button_to 'Destroy Comment', [comment.post, comment],
                :confirm => 'Are you sure?',
-               :method => :delete %>
-</p>
-<p>
-  <b>----------------------------------------------------------------</b>
-</p>
+               :method => :delete, :class => "btn btn-danger" %></td>
+    </tr>
