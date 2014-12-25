@@ -4,7 +4,10 @@ class CommentsController < ApplicationController
     #@comment = Comment.new(comment_params)
     @post  = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    respond_to do |format|
+      format.html { redirect_to post_path(@post), notice: 'Comment was successfully created.' }
+      format.json { head :no_content }
+    end
   end
 
   #Destroy comments

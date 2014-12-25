@@ -2,7 +2,7 @@
 
   <div class="form-group" style="width:400px;">
     <%= f.label :author, :for => "inputDefault",:class => "control-label" %><br>
-    <%= f.text_field :author, :class => "form-control", :id => "inputDefault", :type => "text" %>
+    <%= f.text_field :author, :class => "form-control", :id => "inputDefault", :type => "text", :value => current_user.email %>
   </div>
   <div class="form-group" style="width:400px;">
     <%= f.label :body, :for => "inputLarge",:class => "control-label" %><br>
