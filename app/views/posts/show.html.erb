@@ -13,6 +13,8 @@
   <strong>Attachement:</strong>
   <%= image_tag @post.avatar.url(:medium) %>
 </p>
+
+<%= link_to 'Download', :class => "btn btn-default", :action => :download %>
 <h2>Comments</h2>
 <table class="table table-striped table-hover ">
   <thead>

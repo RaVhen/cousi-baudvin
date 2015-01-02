@@ -61,6 +61,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def download
+    @post = Post.find(params[:id])
+    send_file @post.avatar.path, :type => 'image/jpeg', :disposition => 'attachment'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
