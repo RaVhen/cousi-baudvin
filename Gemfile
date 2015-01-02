@@ -35,6 +35,7 @@ end
 
 gem 'better_errors', '>= 0.6.0'
 gem 'binding_of_caller'
+gem 'paperclip'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

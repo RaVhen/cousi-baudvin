@@ -9,7 +9,10 @@
   <strong>Description:</strong>
   <%= @post.body %>
 </p>
-
+<p>
+  <strong>Attachement:</strong>
+  <%= image_tag @post.avatar.url(:medium) %>
+</p>
 <h2>Comments</h2>
 <table class="table table-striped table-hover ">
   <thead>
