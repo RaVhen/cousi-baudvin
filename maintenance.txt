@@ -1,0 +1,40 @@
+     ##############
+     # PROJET WEB #
+     ##############
+
+I - Version en ligne
+
+Le site est disponible à l'adresse :
+http://azurium.lucascousi.fr/
+
+II - Installation locale
+
+II A - Prérequis
+
+II A 1 - Rails
+Il faut avoir une version de rails installée correctement.
+
+Nous avons utilisé le script donné en cours, les commandes pour reproduire cette installation sout les suivantes :
+
+	wget fabrigli.fr/cours/install.sh
+	chmod u+x install.sh
+	./install.sh
+
+
+II A 2 - Librairie Imagemgick
+Celle-ci est nécessaire pour le traitement des images.
+
+	sudo apt-get install imagemagick
+
+II B - Installation du serveur
+Pour installer :
+	git clone https://github.com/RaVhen/cousi-baudvin.git
+	cd cousi-baudvin
+	bundle install
+
+
+Pour lancer le serveur une fois l'installation terminée, dans le répertoire baudvin-cousi :
+	rails s
+
+
+
