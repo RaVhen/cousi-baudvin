@@ -37,4 +37,6 @@ Pour lancer le serveur une fois l'installation terminée, dans le répertoire ba
 	rails s
 
 
-
+Pour se loger sur le site avec un login/password, créez en un ou utilisez celui par défault:
+Login : moi@moi.com
+Pass  : superuser
